@@ -69,6 +69,28 @@ semgrep --version
 semgrep scan --config auto --exclude node_modules --exclude dist --exclude build .
 ```
 
+### Windows: Semgrep not found
+If Windows reports that `semgrep` is not recognized, use:
+
+```powershell
+python -m pip install --user semgrep
+python -c "import sysconfig; print(sysconfig.get_path('scripts', scheme='nt_user'))"
+```
+
+Add the printed Scripts directory to your Windows user `Path`, then open a new
+terminal. For the Microsoft Store Python installation, that directory is
+typically:
+
+```text
+C:\Users\<username>\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts
+```
+
+Verify it from a new PowerShell:
+
+```powershell
+semgrep --version
+```
+
 Save a baseline JSON report:
 ```bash
 mkdir -p reports/before reports/after

@@ -9,3 +9,5 @@ reports/before/*.json
 reports/after/*.json
 .DS_Store
 *.log
+!reports/before/*.json
+!reports/after/*.json
