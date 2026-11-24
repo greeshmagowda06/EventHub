@@ -4,3 +4,8 @@ node_modules/
 !.env.example
 dist/
 build/
+coverage/
+reports/before/*.json
+reports/after/*.json
+.DS_Store
+*.log
